@@ -147,7 +147,7 @@ body {
 }
 .note {
     width: 95%;
-    height: 30%;
+    height: 100%;
     background-color: #f9f9f9;
     position: absolute;
     overflow: hidden;

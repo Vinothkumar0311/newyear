@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,13 +21,13 @@
             <div class="note__text">
               <p>Dear Bestfriend,</p>
               <p>
-                Happy New Year! 2024 mudichu, ippadiyum oru varushaththil
-                ungaloda support, care, and everything you’ve done for me, enna
-                solraththaan! 08.11.2024-la namma first time pesi start
-                pannadhudhaan, and adha vida, innum enna neraya kathaigal, happy
-                thoughts, sad thoughts, future plans, dreams, partners, and
-                everything else share pannom. Athe maari, namma friendship-la
-                ellaam irundhaal, we had so much fun together.
+                Happy New Year! 🎉🥳 2024 mudichachu, ippadiyum oru varushathula
+                unga support, care, and ellathukkum enna solradhu nu therila!
+                🤗❤️ 08.11.2024-la namma first time pesi start pannadhu dhaan,
+                and adhukapram naraya kathaigal, happy thoughts, sad moments,
+                future plans, dreams, partners, and ellame share pannom. 😄✨
+                Atha maadhiri, namma friendship-la ellam irundhaalum, we had so
+                much fun together! 😍🙌
               </p>
             </div>
           </div>
@@ -35,180 +35,25 @@
             <div class="note__text">
               <p>
                 Intha new year-la, let’s continue this friendship with even more
-                understanding and joy, create more amazing memories, and make
-                new plans. I hope this year brings more happiness, success, and
-                special moments for both of us. I’m sure we’ll create so many
-                beautiful memories and laugh even more. 
+                understanding and joy, amazing memories create pannalaam, and
+                new plans pannalaam. 🎊💃 Namma life-la happiness, success, and
+                special moments naraya varanum nu nenaikren. 💫✨ Sure-a, we’ll
+                create so many beautiful memories and laugh innum adhigama! 😄🤣
               </p>
             </div>
           </div>
           <div class="note js-note">
             <div class="note__text">
               <p>
-               I’m so thankful to have
-                you in my life, and here’s to many more years of fun, love, and
-                friendship! 💖 
+                I’m super thankful to have you in my life, and here’s to many
+                more years of fun, love, and friendship! 💖🥰
               </p>
-              <p>Thanks for being my best friend!💖.</p>
+              <p>Thanks for being my best friend! 🫂💞.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
     <script src="./script.js"></script>
-  </body>
-</html> -->
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Envelope Animation</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-  </head>
-
-  <body class="scissors">
-    <div class="envelop">
-      <div class="envelop__front-paper"></div>
-      <div class="envelop__back-paper"></div>
-      <div class="envelop__up-paper js-up-paper"></div>
-      <div class="envelop__sticker js-sticker"></div>
-      <div class="envelop__false-sticker"></div>
-      <div class="envelop__content js-envelop-content">
-        <div class="love-notes">
-          <div class="note js-note">
-            <div class="note__text">
-              <p>Dear Bestfriend,</p>
-              <p>
-                Happy New Year! 2024 mudichu, ippadiyum oru varushaththil
-                ungaloda support, care, and everything you’ve done for me, enna
-                solraththaan! 08.11.2024-la namma first time pesi start
-                pannadhudhaan, and adha vida, innum enna neraya kathaigal, happy
-                thoughts, sad thoughts, future plans, dreams, partners, and
-                everything else share pannom. Athe maari, namma friendship-la
-                ellaam irundhaal, we had so much fun together.
-              </p>
-            </div>
-          </div>
-          <div class="note js-note">
-            <div class="note__text">
-              <p>
-                Intha new year-la, let’s continue this friendship with even more
-                understanding and joy, create more amazing memories, and make
-                new plans. I hope this year brings more happiness, success, and
-                special moments for both of us. I’m sure we’ll create so many
-                beautiful memories and laugh even more. 
-              </p>
-            </div>
-          </div>
-          <div class="note js-note">
-            <div class="note__text">
-              <p>
-                I’m so thankful to have you in my life, and here’s to many more
-                years of fun, love, and friendship! 💖
-              </p>
-              <p>Thanks for being my best friend!💖</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      // Media Queries
-      const mobileMediaQuery = window.matchMedia("(max-width: 400px)");
-      const tabletMediaQuery = window.matchMedia("(min-width: 400px) and (max-width: 600px)");
-
-      const notes = document.querySelectorAll(".js-note");
-
-      // Reset the size of notes
-      function resetNotes() {
-        notes.forEach(note => {
-          if (note.classList.contains("active")) {
-            note.classList.remove("active");
-            gsap.set(note, {
-              height: "30%",
-              clearProps: "all"
-            });
-          }
-        });
-      }
-
-      // Enable notes functionality
-      function enableNotes() {
-        gsap.to(".js-envelop-content", {
-          height: "110%",
-          duration: 0.5
-        });
-
-        notes.forEach((note, index) => {
-          note.addEventListener("click", function () {
-            if (this.classList.contains("active")) {
-              this.classList.remove("active");
-              gsap.set(this, {
-                height: "30%",
-                clearProps: "all"
-              });
-            } else {
-              resetNotes();
-              this.classList.add("active");
-
-              const heightIncrement = mobileMediaQuery.matches
-                ? 125 + 40 * index
-                : tabletMediaQuery.matches
-                ? 80 + 21 * index
-                : 70 + 20 * index;
-
-              gsap.set(this, {
-                height: `${heightIncrement}%`
-              });
-            }
-          });
-        });
-      }
-
-      // Set up paper for envelope
-      function setUpPaper() {
-        const clipPathPolygon = "polygon(0% 0%, 100% 0%, 50% 61%)";
-
-        gsap.set(".js-up-paper", {
-          bottom: "97%",
-          rotation: 180,
-          zIndex: 200,
-          clipPath: clipPathPolygon,
-          onComplete: enableNotes
-        });
-      }
-
-      // Start up paper transition
-      function envelopeTransition() {
-        gsap.to(".js-up-paper", {
-          bottom: "1%",
-          duration: 0.25,
-          onComplete: setUpPaper
-        });
-
-        document.querySelector(".js-up-paper").removeEventListener("click", envelopeTransition);
-        document.querySelector(".js-up-paper").classList.remove("cursor");
-      }
-
-      // Allow cutting the sticker
-      function cutSticker() {
-        gsap.set(".js-sticker", { width: "20%", left: "-80%" });
-        document.body.classList.remove("scissors");
-
-        document.querySelector(".js-sticker").removeEventListener("click", cutSticker);
-        document.querySelector(".js-up-paper").addEventListener("click", envelopeTransition);
-        document.querySelector(".js-up-paper").classList.add("cursor");
-      }
-
-      // Initialize
-      document.querySelector(".js-sticker").addEventListener("click", cutSticker);
-
-      window.onresize = resetNotes;
-    </script>
   </body>
 </html>
