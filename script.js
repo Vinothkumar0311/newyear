@@ -22,7 +22,7 @@ function recize_notes() {
 //-> Main function that enables all the notes.
 function notes_ready() {
   gsap.to(".js-envelop-content", {
-    height: "150%",
+    height: "110%",
     duration: 0.5
   });
 
