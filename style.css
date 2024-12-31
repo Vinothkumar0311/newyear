@@ -146,7 +146,7 @@ body {
     align-items: center;
 }
 .note {
-    width: 95%;
+    width: 100%;
     height: 30%;
     background-color: #f9f9f9;
     position: absolute;
