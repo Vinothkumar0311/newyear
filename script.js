@@ -139,14 +139,32 @@ function envelop_transition() {
 
 //-> Function that allows cut the sticker.
 function sticker() {
-  gsap.set(".js-sticker", { width: "20%", left: "-80%" });
-  document.body.classList.remove("scissors");
-  document.querySelector(".js-sticker").removeEventListener("click", sticker);
-  document
-    .querySelector(".js-up-paper")
-    .addEventListener("click", envelop_transition);
-  document.querySelector(".js-up-paper").classList.add("cursor");
+  // Ensure the .js-sticker element exists before applying GSAP and modifying it
+  const stickerElement = document.querySelector(".js-sticker");
+  const upPaperElement = document.querySelector(".js-up-paper");
+
+  if (stickerElement) {
+    gsap.set(stickerElement, { width: "20%", left: "-80%" });
+    stickerElement.removeEventListener("click", sticker);
+  } else {
+    console.error("Element with class .js-sticker not found.");
+    return; // Exit the function if .js-sticker is not found
+  }
+
+  // Remove 'scissors' class from the body if it exists
+  if (document.body.classList.contains("scissors")) {
+    document.body.classList.remove("scissors");
+  }
+
+  // Ensure .js-up-paper element exists before adding event listeners and modifying it
+  if (upPaperElement) {
+    upPaperElement.addEventListener("click", envelop_transition);
+    upPaperElement.classList.add("cursor");
+  } else {
+    console.error("Element with class .js-up-paper not found.");
+  }
 }
+
 
 document.querySelector(".js-sticker").addEventListener("click", sticker);
 
