@@ -30,13 +30,13 @@ body {
 @media (min-width: 400px) and (max-width: 600px) {
     .envelop {
         width: 20rem;
-        height: 20rem;
+        height: 15rem;
    }
 }
 @media (min-width: 600px) {
     .envelop {
         width: 25rem;
-        height: 25rem;
+        height: 20rem;
    }
 }
 @media (min-width: 600px) and (min-height: 600px) {
