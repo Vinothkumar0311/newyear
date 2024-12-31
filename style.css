@@ -170,6 +170,7 @@ body {
 .note__text {
     font-family: "Sofia";
     padding: 1rem;
+    overflow: scroll;
 }
 .note__text p {
     font-size: 0.9rem;
